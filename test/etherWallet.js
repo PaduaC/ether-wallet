@@ -45,7 +45,7 @@ contract("EtherWallet", (accounts) => {
     try {
       await etherWallet.send(accounts[1], 50, { from: accounts[2] });
     } catch (err) {
-      assert(err.message.includes("sender is not allowed"));
+      assert(err.message.includes("Sender is not allowed"));
       return;
     }
     assert(false);
